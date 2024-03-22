@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset = "utf-8">
+        <title>Cagayan De Oro City</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <style>
+          body {
+        background-image: url(back.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+               }
+        </style>
+    
+    </head>
+
+    <body>
+      <div>
+        <nav>
+          <label class="logo">eXplore</label>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a>
+              <ul class = "dropdown">
+                <li><a href="AboutWeb.html">Website</a></li>
+                <li><a href="About.html">Cagayan</a></li>
+              </ul>
+            </li>
+            <li><a href="Destinations.html">Destinations</a></li>
+            <li><a href="Festivals.html">Festivals</a></li>
+            <li><a href="History.html">History</a></li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <div class="container">
+        <div class="text">
+          <h1>About Cagayan de Oro City</h1>
+          </div>
+        </div>
+
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="a.webp" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="second.jpeg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="Red-Sand.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="firstp1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="Elsalvador.jpg.crdownload" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+ <div class="container">
+  <div class="text">
+    <p>
+      Cagayan de Oro is one of the most popular cities in the southern part of the country.  After all, it is the gateway to Northern Mindanao so businesses and tourism are more active than its neighboring towns and city.
+    </p> <br>
+    <p>
+      It is the capital of the province of Misamis Oriental and part of the Metropolitan Cagayan de Oro along with El Salvador City and the towns of Alubijid, Gitagum, Initao, Laguindingan, Libertad, Lugait, Manticao, Naawan, Opol, Balingasag, Claveria, Jasaan, Tagoloan, and Villanueva.
+    </p><br>
+    <p>
+     The city has been nicknamed The City of Golden Friendship, City of Gold, and eventually the Whitewater Rafting Capital of the Philippines.
+    </p>
+
+  </div>
+  </div>
+
+  <footer>
+    &copy; 2024 Cagayan de Oro City
+  </footer>
+  <!-- Scroll to top button -->
+  <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
+  
+  <script>
+  // Get the button
+  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+  </script>
+    </body>
+    </html>
